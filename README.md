@@ -15,6 +15,13 @@ These widgets are categorized as integrated In-panel widgets which can be added 
 3.Basemap Option  
 4.Basic Map Tools  
 
+# Demo #
+
+
+https://user-images.githubusercontent.com/103164131/165481110-1f4fa274-1cd9-4a1e-b5d7-31c507a8eb3c.mp4
+
+
+
 **How to use mgis widget?**
 
 * Add mgis-widget script into html page
