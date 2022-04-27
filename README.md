@@ -10,7 +10,7 @@ This wrapper has all of the parameters that allow configuration and customizatio
 These widgets are categorized as integrated In-panel widgets which can be added to your app.
 
 # List of Available mGIS Widgets #
-1.Map Canvas- 2D and 3D  
+1.Map View- 2D and 3D  
 2.Workview  
 3.Basemap Option  
 4.Basic Map Tools  
@@ -66,7 +66,8 @@ These widgets are categorized as integrated In-panel widgets which can be added 
   //Show Map Controls
   mgisWidget.setWidgetProperties({
     "mapControls": true
- * Available Otions
+```
+* Available Otions
 
   | Option        | Type | Default Value | Description |
   | ------------- | ------------- | ------------- |------------- |
