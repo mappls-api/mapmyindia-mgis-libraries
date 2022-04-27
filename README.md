@@ -18,7 +18,8 @@ These widgets are categorized as integrated In-panel widgets which can be added 
 # Demo #
 
 
-https://user-images.githubusercontent.com/103164131/165481110-1f4fa274-1cd9-4a1e-b5d7-31c507a8eb3c.mp4
+![mGIS-widget](https://user-images.githubusercontent.com/103164131/165482651-8440ab8a-fccb-454d-9be7-c4b5ffa06d9b.gif)
+
 
 
 
