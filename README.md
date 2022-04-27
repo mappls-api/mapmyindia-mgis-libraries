@@ -1,8 +1,25 @@
+mGIS Widgets
+============
+
+# Introduction #
+
+mGIS Widget wrapper includes many out-of-the-box widgets.These widgets provide standard functions to easily create GIS web portals. 
+
+This wrapper has all of the parameters that allow configuration and customization.
+
+These widgets are categorized as integrated In-panel widgets which can be added to your app.
+
+# List of Available mGIS Widgets #
+1.Map Canvas- 2D and 3D  
+2.Workview  
+3.Basemap Option  
+4.Basic Map Tools  
+
 **How to use mgis widget?**
 
 * Add mgis-widget script into html page
 ```html
-  <script src="http://localhost:4200/widgets.js"></script>
+  <script src="./widgets.js"></script>
 ```
 * Declare widget container where widget to be initialized
 ```javascript
