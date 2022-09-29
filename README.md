@@ -16,7 +16,9 @@ These widgets are categorized as integrated In-panel widgets which can be added 
 1.Map View- 2D and 3D  
 2.Workview  
 3.Basemap Option  
-4.Basic Map Tools  
+4.Basic Map Tools
+5.3D Landmark
+6.Real_View
 
 # Demo #
 
