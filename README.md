@@ -1,4 +1,4 @@
-[<img src="https://about.mappls.com/images/mappls-b-logo.svg" height="60"/> </p>](https://www.mapmyindia.com/api)
+[<img src="https://about.mappls.com/images/mappls-logo.svg" height="60"/> </p>](https://about.mappls.com/api/)
 
 
 mGIS Widgets
@@ -16,9 +16,9 @@ These widgets are categorized as integrated In-panel widgets which can be added 
 1.Map View- 2D and 3D  
 2.Workview  
 3.Basemap Option  
-4.Basic Map Tools
-5.3D Landmark
-6.Real_View
+4.Basic Map Tools  
+5.3D Landmark  
+6.Real_View  
 
 # Demo #
 
@@ -32,7 +32,7 @@ These widgets are categorized as integrated In-panel widgets which can be added 
 
 * Add mgis-widget script into html page
 ```html
-  <script src="./widgets.js"></script>
+  <script src="http://localhost:4200/widgets.js"></script>
 ```
 * Declare widget container where widget to be initialized
 ```javascript
@@ -55,7 +55,9 @@ These widgets are categorized as integrated In-panel widgets which can be added 
         "zoom": 12
       },
       "mapControls": true, // Show/Hide map controls
-      "workViewName": "styleTest", // Load default workview
+      "workViewName": "styleTest", // Load default workview,
+      "Landmark3D":["BatchedThe_Clock_Tower","BatchedNew_Academic_Building"], //Show 3d Landmark - Applicable for view mode 3d only
+      "enableRealView":true, // Show/Hide Real View
     }
   }
 ```
@@ -69,7 +71,7 @@ These widgets are categorized as integrated In-panel widgets which can be added 
   // Initialize widget
   mgisWidget.init();
 ```
-* Update widget properties
+* Update widget properties at run time
 ```javascript
   //Change View Mode
   mgisWidget.setWidgetProperties({
@@ -79,8 +81,24 @@ These widgets are categorized as integrated In-panel widgets which can be added 
   //Show Map Controls
   mgisWidget.setWidgetProperties({
     "mapControls": true
+  });
+
+  //Hide Map Controls
+  mgisWidget.setWidgetProperties({
+    "mapControls": false
+  });
+
+  //Hide Map Controls
+  mgisWidget.setWidgetProperties({
+    "workViewName": 'ww5'
+  });
+
+  //Show 3d Landmark - Applicable for view mode 3d only
+  mgisWidget.setWidgetProperties({
+    "Landmark3D": ['BatchedMAX_AND_EXPORT_Chunk_02_04']
+  });
 ```
-* Available Otions
+* Available Otions  
 
   | Option        | Type | Default Value | Description |
   | ------------- | ------------- | ------------- |------------- |
@@ -88,7 +106,7 @@ These widgets are categorized as integrated In-panel widgets which can be added 
   | widgetKey     | String |  | Use Access Token as widget key |
   | widgetOptions | Object |[widgetOptions](#widgetoptions)  | Widget options |
 
-  * widgetOptions
+  * widgetOptions  
 
   | **Option**     | **Type** | **Default Value** | **Description**                                 |
   |----------------|----------|-------------------|-------------------------------------------------|
@@ -110,13 +128,16 @@ These widgets are categorized as integrated In-panel widgets which can be added 
   | mapControls    | Boolean  |  true             | Show the map controls                           |
   |                |          |  false            | Hide the map controls                           |
   | workViewName   | String   |                   | Set the workview name to load the workview data |
+  | Landmark3D   | Array   |                   | Set the 3d Landmark Names to show 3d landmark on cesium, This option work for view mode 3d only |
+  | enableRealView    | Boolean  |  true             | Enable/Disable Real View                           |
 
-  * defaultView
+  * defaultView  
 
   | Option | Type   | Default Value | Description                           |
   |--------|--------|---------------|---------------------------------------|
   | center | Array  |               | Set the center of the map. [lat,long] |
   | zoom   | Number |               | Set the zoom level of the map         |
+
   
   <br><br>
   <br><br>
