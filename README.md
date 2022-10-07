@@ -13,7 +13,7 @@ This wrapper has all of the parameters that allow configuration and customizatio
 These widgets are categorized as integrated In-panel widgets which can be added to your app.
 
 # List of Available mGIS Widgets #
-1.[Map View- 2D and 3D](#Map-View-2D-and-3D)  
+1.[Map View-2D and 3D](#Map-View-2D-and-3D)  
 2.[Workview](#Workview)    
 3.[Basemap Option](#Basemap-option)  
 4.[Basic Map Tools](#Basic-Map-Tools)  
@@ -81,7 +81,7 @@ These widgets are categorized as integrated In-panel widgets which can be added 
 
   
 ```
-# Map View- 2D and 3D
+# Map View-2D and 3D
 
 * Declare widget options
 ```javascript
