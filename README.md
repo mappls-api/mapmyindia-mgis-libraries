@@ -13,12 +13,12 @@ This wrapper has all of the parameters that allow configuration and customizatio
 These widgets are categorized as integrated In-panel widgets which can be added to your app.
 
 # List of Available mGIS Widgets #
-1.Map View- 2D and 3D  
-2.Workview  
-3.Basemap Option  
-4.Basic Map Tools  
-5.3D Landmark  
-6.Real_View  
+1.[Map View- 2D and 3D](#Map-View-2D-and-3D)  
+2.[Workview](#Workview)    
+3.[Basemap Option](#Basemap-option)  
+4.[Basic Map Tools](#Basic-Map-Tools)  
+5.[3D Landmark](#3D-Landmark)  
+6.[Real_View](#Real-View)   
 
 # Demo #
 
@@ -38,65 +38,6 @@ These widgets are categorized as integrated In-panel widgets which can be added 
 ```javascript
   <div id="widgetContainer" style="height: 600px; width: 800px;"></div>
 ```
-* Declare widget options
-```javascript
-// Widget options
-  var widgetOptions = {
-    "widgetName": "map-widget", //Name Of The Widget
-    "widgetKey": "", // Access Token as widget key
-    "widgetOptions":{ // Widget Options
-      "mapViewMode": "2d", // Default view mode map 2d or 3d
-      "defaultBaseMap": "mmi-raster", // Set Default Base Map
-      "defaultView": { // Set Default View Of The Map
-        "center": [
-          28.7041,
-          77.1025
-        ],
-        "zoom": 12
-      },
-      "mapControls": true, // Show/Hide map controls
-      "workViewName": "styleTest", // Load default workview,
-      "Landmark3D":["BatchedThe_Clock_Tower","BatchedNew_Academic_Building"], //Show 3d Landmark - Applicable for view mode 3d only
-      "enableRealView":true, // Show/Hide Real View
-    }
-  }
-```
-* Create Instance of mgis-widget
-```javascript
-// Create widget
-  var mgisWidget = new MGIS.Widget('widgetContainer',widgetOptions);
-```
-* Initialize mgis-widget
-```javascript
-  // Initialize widget
-  mgisWidget.init();
-```
-* Update widget properties at run time
-```javascript
-  //Change View Mode
-  mgisWidget.setWidgetProperties({
-    "mapViewMode": viewMode
-  });
-
-  //Show Map Controls
-  mgisWidget.setWidgetProperties({
-    "mapControls": true
-  });
-
-  //Hide Map Controls
-  mgisWidget.setWidgetProperties({
-    "mapControls": false
-  });
-
-  //Hide Map Controls
-  mgisWidget.setWidgetProperties({
-    "workViewName": 'ww5'
-  });
-
-  //Show 3d Landmark - Applicable for view mode 3d only
-  mgisWidget.setWidgetProperties({
-    "Landmark3D": ['BatchedMAX_AND_EXPORT_Chunk_02_04']
-  });
 ```
 * Available Otions  
 
@@ -139,10 +80,329 @@ These widgets are categorized as integrated In-panel widgets which can be added 
   | zoom   | Number |               | Set the zoom level of the map         |
 
   
-  <br><br>
-  <br><br>
-  
- For any queries and support, please contact:<br> 
+```
+# Map View- 2D and 3D
+
+* Declare widget options
+```javascript
+// Widget options
+  var widgetOptions = {
+    "widgetName": "map-widget", //Name Of The Widget
+    "widgetKey": "", // Access Token as widget key
+    "widgetOptions":{ // Widget Options
+      "mapViewMode": "2d", // Default view mode map 2d or 3d
+      "defaultBaseMap": "mmi-raster", // Set Default Base Map
+      "defaultView": { // Set Default View Of The Map
+        "center": [
+          28.7041,
+          77.1025
+        ],
+        "zoom": 12
+      },
+      "mapControls": true, // Show/Hide map controls
+    }
+  }
+```
+* Create Instance of mgis-widget
+```javascript
+// Create widget
+  var mgisWidget = new MGIS.Widget('widgetContainer',widgetOptions);
+```
+* Initialize mgis-widget
+```javascript
+  // Initialize widget
+  mgisWidget.init();
+```
+* Update widget properties at run time
+```javascript
+  //Change View Mode
+  mgisWidget.setWidgetProperties({
+    "mapViewMode": viewMode
+  });
+
+  //Show Map Controls
+  mgisWidget.setWidgetProperties({
+    "mapControls": true
+  });
+
+  //Hide Map Controls
+  mgisWidget.setWidgetProperties({
+    "mapControls": false
+  });
+```
+# Workview
+* Declare widget options
+```javascript
+// Widget options
+  var widgetOptions = {
+    "widgetName": "map-widget", //Name Of The Widget
+    "widgetKey": "", // Access Token as widget key
+    "widgetOptions":{ // Widget Options
+      "mapViewMode": "2d", // Default view mode map 2d or 3d
+      "defaultBaseMap": "mmi-raster", // Set Default Base Map
+      "defaultView": { // Set Default View Of The Map
+        "center": [
+          28.7041,
+          77.1025
+        ],
+        "zoom": 12
+      },
+      "mapControls": true, // Show/Hide map controls
+      "workViewName": "styleTest", // Load default workview,
+    }
+  }
+```
+ * Create Instance of mgis-widget
+
+```javascript 
+// Create widget
+  var mgisWidget = new MGIS.Widget('widgetContainer',widgetOptions);
+```
+* Initialize mgis-widget
+```javascript
+  // Initialize widget
+  mgisWidget.init();
+```
+* Update widget properties at run time
+```javascript
+  //Change View Mode
+  mgisWidget.setWidgetProperties({
+    "mapViewMode": viewMode
+  });
+
+  //Show Map Controls
+  mgisWidget.setWidgetProperties({
+    "mapControls": true
+  });
+
+  //Hide Map Controls
+  mgisWidget.setWidgetProperties({
+    "mapControls": false
+  });
+
+  //Hide Map Controls
+  mgisWidget.setWidgetProperties({
+    "workViewName": 'ww5'
+  });
+```
+# Basemap Option
+
+* Declare widget options
+```javascript
+// Widget options
+  var widgetOptions = {
+    "widgetName": "map-widget", //Name Of The Widget
+    "widgetKey": "", // Access Token as widget key
+    "widgetOptions":{ // Widget Options
+      "mapViewMode": "2d", // Default view mode map 2d or 3d
+      "defaultBaseMap": "mmi-raster", // Set Default Base Map
+      "defaultView": { // Set Default View Of The Map
+        "center": [
+          28.7041,
+          77.1025
+        ],
+        "zoom": 12
+      },
+      "mapControls": true, // Show/Hide map controls
+    }
+  }
+```
+* Create Instance of mgis-widget
+```javascript
+// Create widget
+  var mgisWidget = new MGIS.Widget('widgetContainer',widgetOptions);
+```
+* Initialize mgis-widget
+```javascript
+  // Initialize widget
+  mgisWidget.init();
+```
+* Update widget properties at run time
+```javascript
+  //Change View Mode
+  mgisWidget.setWidgetProperties({
+    "mapViewMode": viewMode
+  });
+
+  //Show Map Controls
+  mgisWidget.setWidgetProperties({
+    "mapControls": true
+  });
+
+  //Hide Map Controls
+  mgisWidget.setWidgetProperties({
+    "mapControls": false
+  });
+```
+# Basic Map Tools
+
+* Declare widget options
+```javascript
+// Widget options
+  var widgetOptions = {
+    "widgetName": "map-widget", //Name Of The Widget
+    "widgetKey": "", // Access Token as widget key
+    "widgetOptions":{ // Widget Options
+      "mapViewMode": "2d", // Default view mode map 2d or 3d
+      "defaultBaseMap": "mmi-raster", // Set Default Base Map
+      "defaultView": { // Set Default View Of The Map
+        "center": [
+          28.7041,
+          77.1025
+        ],
+        "zoom": 12
+      },
+      "mapControls": true, // Show/Hide map controls
+    }
+  }
+```
+* Create Instance of mgis-widget
+```javascript
+// Create widget
+  var mgisWidget = new MGIS.Widget('widgetContainer',widgetOptions);
+```
+* Initialize mgis-widget
+```javascript
+  // Initialize widget
+  mgisWidget.init();
+```
+* Update widget properties at run time
+```javascript
+  //Change View Mode
+  mgisWidget.setWidgetProperties({
+    "mapViewMode": viewMode
+  });
+
+  //Show Map Controls
+  mgisWidget.setWidgetProperties({
+    "mapControls": true
+  });
+
+  //Hide Map Controls
+  mgisWidget.setWidgetProperties({
+    "mapControls": false
+  });
+```
+# 3D Landmark
+* Declare widget options
+```javascript
+// Widget options
+  var widgetOptions = {
+    "widgetName": "map-widget", //Name Of The Widget
+    "widgetKey": "", // Access Token as widget key
+    "widgetOptions":{ // Widget Options
+      "mapViewMode": "2d", // Default view mode map 2d or 3d
+      "defaultBaseMap": "mmi-raster", // Set Default Base Map
+      "defaultView": { // Set Default View Of The Map
+        "center": [
+          28.7041,
+          77.1025
+        ],
+        "zoom": 12
+      },
+      "mapControls": true, // Show/Hide map controls
+      "workViewName": "styleTest", // Load default workview,
+      "Landmark3D":["BatchedThe_Clock_Tower","BatchedNew_Academic_Building"], //Show 3d Landmark - Applicable for view mode 3d only
+    }
+  }
+  ```
+  * Create Instance of mgis-widget
+```javascript
+// Create widget
+  var mgisWidget = new MGIS.Widget('widgetContainer',widgetOptions);
+```
+* Initialize mgis-widget
+```javascript
+  // Initialize widget
+  mgisWidget.init();
+```
+* Update widget properties at run time
+```javascript
+  //Change View Mode
+  mgisWidget.setWidgetProperties({
+    "mapViewMode": viewMode
+  });
+
+  //Show Map Controls
+  mgisWidget.setWidgetProperties({
+    "mapControls": true
+  });
+
+  //Hide Map Controls
+  mgisWidget.setWidgetProperties({
+    "mapControls": false
+  });
+
+  //Show 3d Landmark - Applicable for view mode 3d only
+  mgisWidget.setWidgetProperties({
+    "Landmark3D": ['BatchedMAX_AND_EXPORT_Chunk_02_04']
+  });
+```
+# Real_View
+* Declare widget options
+```javascript
+// Widget options
+  var widgetOptions = {
+    "widgetName": "map-widget", //Name Of The Widget
+    "widgetKey": "", // Access Token as widget key
+    "widgetOptions":{ // Widget Options
+      "mapViewMode": "2d", // Default view mode map 2d or 3d
+      "defaultBaseMap": "mmi-raster", // Set Default Base Map
+      "defaultView": { // Set Default View Of The Map
+        "center": [
+          28.7041,
+          77.1025
+        ],
+        "zoom": 12
+      },
+      "mapControls": true, // Show/Hide map controls
+      "workViewName": "styleTest", // Load default workview,
+      "Landmark3D":["BatchedThe_Clock_Tower","BatchedNew_Academic_Building"], //Show 3d Landmark - Applicable for view mode 3d only
+      "enableRealView":true, // Show/Hide Real View
+    }
+  }
+  ```
+  * Create Instance of mgis-widget
+```javascript
+// Create widget
+  var mgisWidget = new MGIS.Widget('widgetContainer',widgetOptions);
+```
+* Initialize mgis-widget
+```javascript
+  // Initialize widget
+  mgisWidget.init();
+```
+* Update widget properties at run time
+```javascript
+  //Change View Mode
+  mgisWidget.setWidgetProperties({
+    "mapViewMode": viewMode
+  });
+
+  //Show Map Controls
+  mgisWidget.setWidgetProperties({
+    "mapControls": true
+  });
+
+  //Hide Map Controls
+  mgisWidget.setWidgetProperties({
+    "mapControls": false
+  });
+
+  //Hide Map Controls
+  mgisWidget.setWidgetProperties({
+    "workViewName": 'ww5'
+  });
+
+  //Show 3d Landmark - Applicable for view mode 3d only
+  mgisWidget.setWidgetProperties({
+    "Landmark3D": ['BatchedMAX_AND_EXPORT_Chunk_02_04']
+  });
+ ``` 
+
+
+
+For any queries and support, please contact:<br> 
   [<img src="https://about.mappls.com/images/mappls-logo.svg" height="40"/> </p>](https://about.mappls.com/api/)
 Email us at [apisupport@mappls.com](mailto:apisupport@mappls.com)
 
