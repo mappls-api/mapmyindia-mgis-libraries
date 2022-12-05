@@ -32,7 +32,7 @@ These widgets are categorized as integrated In-panel widgets which can be added 
 
 * Add mgis-widget script into html page
 ```html
-  <script src="http://localhost:4200/widgets.js"></script>
+  <script src="https://mgis.mappls.com/mGIS_widgets/widgets.js"></script>
 ```
 * Declare widget container where widget to be initialized
 ```javascript
