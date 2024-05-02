@@ -39,7 +39,7 @@ These widgets are categorized as integrated In-panel widgets which can be added 
   <div id="widgetContainer" style="height: 600px; width: 800px;"></div>
 ```
 ```
-* Available Otions  
+* Available Otions
 
   | Option        | Type | Default Value | Description |
   | ------------- | ------------- | ------------- |------------- |
@@ -47,7 +47,7 @@ These widgets are categorized as integrated In-panel widgets which can be added 
   | widgetKey     | String |  | Use Access Token as widget key |
   | widgetOptions | Object |[widgetOptions](#widgetoptions)  | Widget options |
 
-  * widgetOptions  
+  * widgetOptions
 
   | **Option**     | **Type** | **Default Value** | **Description**                                 |
   |----------------|----------|-------------------|-------------------------------------------------|
@@ -64,21 +64,39 @@ These widgets are categorized as integrated In-panel widgets which can be added 
   |                |          | BSMP2H            | Google Hybrid                                   |
   |                |          | BSMP3RD           | Google Road                                     |
   |                |          | BSMP4ST           | Satellite                                       |
-  |                |          | BSMP5             | Here Map                                        |
+  |                |          | BSMP5             | Maxar                                        |
   | defaultView    | Object   |                   | Set the default view of the map                 |
   | mapControls    | Boolean  |  true             | Show the map controls                           |
   |                |          |  false            | Hide the map controls                           |
   | workViewName   | String   |                   | Set the workview name to load the workview data |
-  | Landmark3D   | Array   |                   | Set the 3d Landmark Names to show 3d landmark on cesium, This option work for view mode 3d only |
-  | enableRealView    | Boolean  |  true             | Enable/Disable Real View                           |
+  | Scene   | Array   |                   | Set the Scene options to add 3d Landmark Gltf Object or 3D Landmark tile on cesium, This option work for view mode 3d only |
 
-  * defaultView  
+  * defaultView
 
   | Option | Type   | Default Value | Description                           |
   |--------|--------|---------------|---------------------------------------|
   | center | Array  |               | Set the center of the map. [lat,long] |
   | zoom   | Number |               | Set the zoom level of the map         |
 
+  * Scene
+
+  | Option | Type   | Default Value | Description                           |
+  |--------|--------|---------------|---------------------------------------|
+  | timeline | Boolean  |               | Show hide timeline bar from scene |
+  | landmarkOptions   | Object |        |Landmark options to add 3d landmarks on scene|
+
+  * landmarkOptions
+
+  | Option | Type   | Default Value | Description                           |
+  |--------|--------|---------------|---------------------------------------|
+  | type     | String  |    GLTF    | .gltf object |
+  |          |         |    TILESET | 3d tileset (collections of multiple tiles)|
+  |          |         |    TILE    | 3d tile (single tile)|
+  | name     | String  |            |Name of 3d tileset object|
+  | url      | String  |            |Url of 3d landmark object|
+  | latitude | Number  |            |Latitude use for set initial view of 3d landmark object|
+  | longitude| Number  |            |Longitude use for set initial view of 3d landmark object|
+  | height   | Number  |            |Set the height of 3d landmark object|
   
 ```
 # Map View-2D and 3D
