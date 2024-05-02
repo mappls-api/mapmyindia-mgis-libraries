@@ -38,67 +38,70 @@ These widgets are categorized as integrated In-panel widgets which can be added 
 ```javascript
   <div id="widgetContainer" style="height: 600px; width: 800px;"></div>
 ```
-```
+
 * Available Otions
+```
+  | Option        | Type   | Default Value                   | Description                    |
+  |---------------|--------|---------------------------------|--------------------------------|
+  | widgetName    | String |                                 | Name of the widget             |
+  | widgetKey     | String |                                 | Use Access Token as widget key |
+  | widgetOptions | Object | [widgetOptions](#widgetoptions) | Widget options                 |
+```
 
-  | Option        | Type | Default Value | Description |
-  | ------------- | ------------- | ------------- |------------- |
-  | widgetName    | String |  | Name of the widget |
-  | widgetKey     | String |  | Use Access Token as widget key |
-  | widgetOptions | Object |[widgetOptions](#widgetoptions)  | Widget options |
+* widgetOptions
+```
+  | **Option**     | **Type** | **Default Value** | **Description**                                                                                                            |
+  |----------------|----------|-------------------|----------------------------------------------------------------------------------------------------------------------------|
+  | mapViewMode    | String   | 2d                | 2d View mode of the map                                                                                                    |
+  |                |          | 3d                | 3d View mode of the map                                                                                                    |
+  | defaultBaseMap | String   | mmi-raster        | MMI Raster                                                                                                                 |
+  |                |          | mmi-vector        | MMI Vector                                                                                                                 |
+  |                |          | hr-imagery        | HR Imagery                                                                                                                 |
+  |                |          | hr-imagery-hybrid | HR Imagery Hybrid                                                                                                          |
+  |                |          | bhuvan-satellite  | Bhuvan Satellite                                                                                                           |
+  |                |          | bhuvan-hybrid     | Bhuvan Hybrid                                                                                                              |
+  |                |          | no-basemap        | No Basemap                                                                                                                 |
+  |                |          | BSMP1             | OpenStreetMap                                                                                                              |
+  |                |          | BSMP2H            | Google Hybrid                                                                                                              |
+  |                |          | BSMP3RD           | Google Road                                                                                                                |
+  |                |          | BSMP4ST           | Satellite                                                                                                                  |
+  |                |          | BSMP5             | Maxar                                                                                                                      |
+  | defaultView    | Object   |                   | Set the default view of the map                                                                                            |
+  | mapControls    | Boolean  | true              | Show the map controls                                                                                                      |
+  |                |          | false             | Hide the map controls                                                                                                      |
+  | workViewName   | String   |                   | Set the workview name to load the workview data                                                                            |
+  | Scene          | Array    |                   | Set the Scene options to add 3d Landmark Gltf Object or 3D Landmark tile on cesium, This option work for view mode 3d only |
+```
 
-  * widgetOptions
-
-  | **Option**     | **Type** | **Default Value** | **Description**                                 |
-  |----------------|----------|-------------------|-------------------------------------------------|
-  | mapViewMode    | String   | 2d                | 2d View mode of the map                         |
-  |                |          | 3d                | 3d View mode of the map                         |
-  | defaultBaseMap | String   | mmi-raster        | MMI Raster                                      |
-  |                |          | mmi-vector        | MMI Vector                                      |
-  |                |          | hr-imagery        | HR Imagery                                      |
-  |                |          | hr-imagery-hybrid | HR Imagery Hybrid                               |
-  |                |          | bhuvan-satellite  | Bhuvan Satellite                                |
-  |                |          | bhuvan-hybrid     | Bhuvan Hybrid                                   |
-  |                |          | no-basemap        | No Basemap                                      |
-  |                |          | BSMP1             | OpenStreetMap                                   |
-  |                |          | BSMP2H            | Google Hybrid                                   |
-  |                |          | BSMP3RD           | Google Road                                     |
-  |                |          | BSMP4ST           | Satellite                                       |
-  |                |          | BSMP5             | Maxar                                        |
-  | defaultView    | Object   |                   | Set the default view of the map                 |
-  | mapControls    | Boolean  |  true             | Show the map controls                           |
-  |                |          |  false            | Hide the map controls                           |
-  | workViewName   | String   |                   | Set the workview name to load the workview data |
-  | Scene   | Array   |                   | Set the Scene options to add 3d Landmark Gltf Object or 3D Landmark tile on cesium, This option work for view mode 3d only |
-
-  * defaultView
-
+* defaultView
+```
   | Option | Type   | Default Value | Description                           |
   |--------|--------|---------------|---------------------------------------|
   | center | Array  |               | Set the center of the map. [lat,long] |
   | zoom   | Number |               | Set the zoom level of the map         |
-
-  * Scene
-
-  | Option | Type   | Default Value | Description                           |
-  |--------|--------|---------------|---------------------------------------|
-  | timeline | Boolean  |               | Show hide timeline bar from scene |
-  | landmarkOptions   | Object |        |Landmark options to add 3d landmarks on scene|
-
-  * landmarkOptions
-
-  | Option | Type   | Default Value | Description                           |
-  |--------|--------|---------------|---------------------------------------|
-  | type     | String  |    GLTF    | .gltf object |
-  |          |         |    TILESET | 3d tileset (collections of multiple tiles)|
-  |          |         |    TILE    | 3d tile (single tile)|
-  | name     | String  |            |Name of 3d tileset object|
-  | url      | String  |            |Url of 3d landmark object|
-  | latitude | Number  |            |Latitude use for set initial view of 3d landmark object|
-  | longitude| Number  |            |Longitude use for set initial view of 3d landmark object|
-  | height   | Number  |            |Set the height of 3d landmark object|
-  
 ```
+* Scene
+```
+  | Option          | Type    | Default Value | Description                                   |
+  |-----------------|---------|---------------|-----------------------------------------------|
+  | timeline        | Boolean |               | Show hide timeline bar from scene             |
+  | landmarkOptions | Object  |               | Landmark options to add 3d landmarks on scene |
+```
+* landmarkOptions
+```
+  | Option    | Type   | Default Value | Description                                              |
+  |-----------|--------|---------------|----------------------------------------------------------|
+  | type      | String | GLTF          | .gltf object                                             |
+  |           |        | TILESET       | 3d tileset (collections of multiple tiles)               |
+  |           |        | TILE          | 3d tile (single tile)                                    |
+  | name      | String |               | Name of 3d tileset object                                |
+  | url       | String |               | Url of 3d landmark object                                |
+  | latitude  | Number |               | Latitude use for set initial view of 3d landmark object  |
+  | longitude | Number |               | Longitude use for set initial view of 3d landmark object |
+  | height    | Number |               | Set the height of 3d landmark object                     |
+  ```
+  
+
 # Map View-2D and 3D
 
 * Declare widget options
