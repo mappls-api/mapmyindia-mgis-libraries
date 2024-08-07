@@ -5,13 +5,9 @@
 
 The mGIS Tour Widget enhances your app with immersive 3D terrain drive through. This powerful widget allows users to explore and simulate navigation on a three-dimensional Earth model. With customizable parameters, you can fine-tune the tour experience to suit your specific needs.
 
-</br>
-
 <div align="center">
 <img src="../docs/images/mgis-widget-tour.gif" alt="mGIS Tour Widget Intro GIF"/>
 </div>
-
-</br>
 
 This is a comprehensive guide to the mGIS Tour widget and its implementation. It's structured to help you quickly understand, set up, and use our widget effectively. Use this table of contents to navigate directly to the information you need:
 

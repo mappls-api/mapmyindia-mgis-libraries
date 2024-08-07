@@ -13,12 +13,13 @@ This wrapper has all of the parameters that allow configuration and customizatio
 These widgets are categorized as integrated In-panel widgets which can be added to your app.
 
 # List of Available mGIS Widgets #
-1.[Map View-2D and 3D](#Map-View-2D-and-3D)  
-2.[Workview](#Workview)    
-3.[Basemap Option](#Basemap-option)  
-4.[Basic Map Tools](#Basic-Map-Tools)  
-5.[3D Landmark](#3D-Landmark)  
-6.[Real_View](#Real-View)   
+1. [Map View-2D and 3D](#map-view-2d-and-3d)  
+2. [Workview](#workview)    
+3. [Basemap Option](#basemap-option)  
+4. [Basic Map Tools](#basic-map-tools)  
+5. [3D Landmark](#3d-landmark)  
+6. [Real View](#real-view)
+7. [Tour](./mgis-tour-widget/README.md)   
 
 # Demo #
 
@@ -347,7 +348,7 @@ These widgets are categorized as integrated In-panel widgets which can be added 
     "Landmark3D": ['BatchedMAX_AND_EXPORT_Chunk_02_04']
   });
 ```
-# Real_View
+# Real View
 * Declare widget options
 ```javascript
 // Widget options
